@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="h"></div>
+    <!-- Modal -->
+    <div id="modal-container" class="isClose">
+      <div id="modal" class="modal">
+        <h1>Insert a book to the library</h1>
+        <!-- Form -->
+        <form action="" onsubmit="return false">
+          <div class="input-container">
+            <label for="title">Title:</label>
+            <input type="text" id="title" />
+          </div>
+          <div class="input-container">
+            <label for="author">Author:</label>
+            <input type="text" id="author" />
+          </div>
+          <div class="input-container">
+            <label for="year">Year of publishment:</label>
+            <input type="text" id="year" />
+          </div>
+          <div class="button-container">
+            <button
+              class="btn"
+              type="button"
+              onclick="addBookToLibrary(); showCard(); clearInputValues();"
+            >
+              Insert book
+            </button>
+            <button class="btn" onclick="closeModal()">Close modal</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Main Body -->
+    <header>
+      <div class="mask"></div>
+      <h1>Welcome to the library!</h1>
+    </header>
+    <div class="container">
+      <div class="btn-container">
+        <button class="btn btn-block" onclick="openModal()">Add book</button>
+      </div>
+      <!-- !! div of Interest - start -->
+      <div id="cards-container" class="cards-container"></div>
+      <!-- !! end -->
+    </div>
+  </body>
+  <script>
+    const wizards = ['Harry', 'Hermione', 'Gandalf']
+    //get an new array from wizards
+    //convert it to a string with join
+    /*  HTMLWizards = wizards.map(wizard => '<li>' + wizard + '</li>').join('')
+    const div = document.getElementById('h')
+    div.innerHTML = '<ul>' + HTMLWizards + '</ul>' */
+  </script>
+  <script src="./logic.js"></script>
+</html>
